@@ -75,7 +75,7 @@ def draw_lanes(img, lines, color=[255, 0, 0], thickness=8):
   right_vtx = calc_lane_vertices(right_points, 700, img.shape[0])#拟合点集，生成直线表达式，并计算右侧直线在图像中的两个端点的坐标
 
   cv2.line(img, (left_vtx[0][0],left_vtx[0][1]), left_vtx[1], color, thickness=20)#画出直线
-  cv2.line(img, (right_vtx[0][0]-50,right_vtx[0][1]), right_vtx[1], color, thickness=20)#画出直线
+  cv2.line(img, (right_vtx[0][0],right_vtx[0][1]), right_vtx[1], color, thickness=20)#画出直线
 
 #将不满足斜率要求的直线弹出
 def clean_lines(lines, threshold):
